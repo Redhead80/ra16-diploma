@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'
 
 export default function Card({ item, isCatalog = true }) {
    const { title, price, images, id } = item;
@@ -37,9 +38,9 @@ export default function Card({ item, isCatalog = true }) {
             <div className="card-body">
                <p className="card-text">{title}</p>
                <p className="card-text">{formatPrice(price)}</p>
-               <a href={`/catalog/${id}`} className="btn btn-outline-primary">
+               <Link to={`/catalog/${id}`} className="btn btn-outline-primary">
                   Заказать
-               </a>
+               </Link>
             </div>
          </div>
       </div>
